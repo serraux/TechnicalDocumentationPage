@@ -282,6 +282,9 @@ main #container-section .main-section #introduction {
     -ms-grid-column: 2;
     grid-area: section;
   }
+  main #container-section .main-section img[alt="flecha arriba"] {
+    display: none;
+  }
 }
 
 #anim {

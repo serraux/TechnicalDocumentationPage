@@ -221,6 +221,11 @@ main {
     }
     #container-section {
       grid-area: section;
+      .main-section {
+        img[alt="flecha arriba"] {
+          display: none;
+        }
+      }
     }
   }
 }
