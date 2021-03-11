@@ -119,6 +119,7 @@ main #container-section {
   overflow: scroll;
   height: 500px;
   padding: 0.4em;
+  scroll-behavior: smooth;
 }
 
 main #container-section .main-section {
