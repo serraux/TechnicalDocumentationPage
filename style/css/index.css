@@ -1,0 +1,311 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap");
+* {
+  margin: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  font-family: sans-serif;
+  width: 100%;
+}
+
+/* text-shadow: 0 1px 2px rgba(0,0,0,0.5), 0px -1px 2px rgba(255,255,255,0.8); */
+/* Estructura clases genéricas CSS */
+main {
+  position: relative;
+  background-color: rgba(182, 179, 179, 0.658);
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+main .header {
+  position: relative;
+  height: 3.1em;
+  width: 100%;
+  background: white;
+  top: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main .header h1 {
+  font-weight: 500;
+  text-align: right;
+  padding: 0.7rem;
+  font-size: 1.25rem;
+  color: black;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+main .header img {
+  display: block;
+  width: 40px;
+  height: auto;
+  float: right;
+  margin-right: 1em;
+}
+
+main #navbar {
+  width: 99%;
+  height: 120px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background: rgba(233, 232, 226, 0.767);
+  padding: 1em 0 1em 1em;
+}
+
+main #navbar header {
+  font-family: Roboto, "Century Gothic", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+main #navbar ul {
+  padding: 0;
+}
+
+main #navbar ul li {
+  list-style: none;
+  padding: 0.2em;
+  font-family: Roboto, "Century Gothic", sans-serif;
+}
+
+main #navbar ul li a {
+  text-decoration: none;
+  display: block;
+}
+
+main #navbar ul li a:hover {
+  /* background: rgb(230, 208, 12); */
+  /*  padding-top: 0.5em;
+            padding-bottom: 0.5em; */
+  color: white;
+  -webkit-animation-name: colorful;
+          animation-name: colorful;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+main #navbar ul li a:visited {
+  color: #252524;
+}
+
+main #navbar .nav-link {
+  background: rgba(210, 211, 208, 0.479);
+  padding-top: 0.3em;
+  border-bottom: 1px solid silver;
+}
+
+main #container-section {
+  overflow: scroll;
+  height: 500px;
+  padding: 0.4em;
+}
+
+main #container-section .main-section {
+  position: relative;
+  margin: 0 auto;
+  width: 95%;
+  margin-bottom: 1em;
+}
+
+main #container-section .main-section header {
+  padding: 0.5em;
+  background: #e6e3e6;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #container-section .main-section header a img {
+  width: 20px;
+  height: auto;
+  display: inline-block;
+  margin-left: 7px;
+}
+
+main #container-section .main-section p {
+  padding: 0.2em;
+  font-family: Roboto, "Century Gothic", sans-serif;
+}
+
+main #container-section .main-section p code {
+  display: block;
+  width: 95%;
+  background: #fdeee1;
+  padding: 0.2em;
+  font-family: "Courier New", Courier, monospace;
+}
+
+main #container-section .main-section ul li {
+  padding: 0.2em;
+  font-family: Roboto, "Century Gothic", sans-serif;
+}
+
+main #container-section .main-section #introduction {
+  top: 5em;
+}
+
+#footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  margin-top: 0.2em;
+  background: rgba(54, 50, 32, 0.849);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#footer .footer-left {
+  position: relative;
+  margin: 0.5em;
+  margin-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-bottom: 0.5em;
+}
+
+#footer .footer-left p {
+  color: white;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 200;
+  text-align: center;
+  padding: 0.5em;
+  border-right: 1px solid silver;
+}
+
+#footer .footer-right {
+  position: relative;
+  margin-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(54, 50, 32, 0.849)), to(rgba(54, 50, 32, 0.493)));
+  background: linear-gradient(180deg, rgba(54, 50, 32, 0.849), rgba(54, 50, 32, 0.493));
+}
+
+#footer .footer-right p {
+  color: white;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 200;
+  text-align: center;
+  padding: 0.5em;
+}
+
+#footer .footer-right p #ch-heart {
+  font-size: 5vmin;
+  color: #00ccff;
+}
+
+#footer .footer-right p #icon-git {
+  width: 20px;
+  height: auto;
+}
+
+#footer a:link {
+  color: #f3f6f7;
+}
+
+#footer a:visited {
+  color: #f1f4f5;
+}
+
+#footer a:hover {
+  background: steelblue;
+}
+
+@media (min-width: 600px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "header header" "navbar section ";
+  }
+  main .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: header;
+  }
+  main #navbar {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: navbar;
+    height: auto;
+  }
+  main #container-section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: section;
+  }
+}
+
+#anim {
+  -webkit-animation-name: colorful;
+          animation-name: colorful;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes colorful {
+  0% {
+    background-color: #d4d4d4;
+  }
+  100% {
+    background-color: rgba(255, 255, 0, 0.644);
+  }
+}
+
+@keyframes colorful {
+  0% {
+    background-color: #d4d4d4;
+  }
+  100% {
+    background-color: rgba(255, 255, 0, 0.644);
+  }
+}
+/*# sourceMappingURL=index.css.map */

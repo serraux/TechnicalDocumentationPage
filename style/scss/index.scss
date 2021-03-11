@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap");
+
+* {
+  margin: 0;
+  margin: 0;
+  //list-style: none;
+  font-family: sans-serif;
+}
+
+body {
+  font-family: sans-serif;
+  width: 100%;
+}
+/* text-shadow: 0 1px 2px rgba(0,0,0,0.5), 0px -1px 2px rgba(255,255,255,0.8); */
+/* Estructura clases genéricas CSS */
+main {
+  position: relative;
+  background-color: rgba(182, 179, 179, 0.658);
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+
+  .header {
+    position: relative;
+    height: 3.1em;
+    width: 100%;
+    background: white;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: flex-start;
+    justify-content: right;
+
+    h1 {
+      font-weight: 500;
+      text-align: right;
+      padding: 0.7rem;
+      font-size: 1.25rem;
+      color: black;
+      flex-grow: 1;
+    }
+    img {
+      display: block;
+      width: 40px;
+      height: auto;
+      float: right;
+      margin-right: 1em;
+    }
+  }
+
+  #navbar {
+    width: 99%;
+    height: 120px;
+    overflow: scroll;
+    overflow-x: hidden;
+    background: rgba(233, 232, 226, 0.767);
+    padding: 1em 0 1em 1em;
+    header {
+      font-family: Roboto, "Century Gothic", sans-serif;
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: 0.5em;
+    }
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+        padding: 0.2em;
+        font-family: Roboto, "Century Gothic", sans-serif;
+        a {
+          text-decoration: none;
+          display: block;
+          &:hover {
+            /* background: rgb(230, 208, 12); */
+
+            /*  padding-top: 0.5em;
+            padding-bottom: 0.5em; */
+            color: white;
+            animation-name: colorful;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+          }
+          &:visited {
+            color: rgb(37, 37, 36);
+          }
+        }
+      }
+    }
+    .nav-link {
+      background: rgba(210, 211, 208, 0.479);
+      padding-top: 0.3em;
+      border-bottom: 1px solid silver;
+    }
+  }
+
+  #container-section {
+    overflow: scroll;
+    height: 500px;
+    padding: 0.4em;
+    .main-section {
+      position: relative;
+      margin: 0 auto;
+      width: 95%;
+      margin-bottom: 1em;
+      header {
+        padding: 0.5em;
+        background: rgb(230, 227, 230);
+        font-family: "Century Gothic", sans-serif;
+        font-weight: bold;
+        display: flex;
+
+        a img {
+          width: 20px;
+          height: auto;
+          display: inline-block;
+          margin-left: 7px;
+        }
+      }
+      p {
+        padding: 0.2em;
+        font-family: Roboto, "Century Gothic", sans-serif;
+        code {
+          display: block;
+          width: 95%;
+          background: rgb(253, 238, 225);
+          padding: 0.2em;
+          font-family: "Courier New", Courier, monospace;
+        }
+      }
+      ul li {
+        padding: 0.2em;
+        font-family: Roboto, "Century Gothic", sans-serif;
+      }
+      #introduction {
+        top: 5em;
+      }
+    }
+  }
+}
+
+#footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  margin-top: 0.2em;
+  background: rgba(54, 50, 32, 0.849);
+  display: flex;
+  flex-direction: column;
+
+  .footer-left {
+    position: relative;
+    margin: 0.5em;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: 0.5em;
+
+    p {
+      color: white;
+      font-family: "Century Gothic", sans-serif;
+      font-weight: 200;
+      text-align: center;
+      padding: 0.5em;
+      border-right: 1px solid silver;
+    }
+  }
+  .footer-right {
+    position: relative;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(54, 50, 32, 0.849),
+      rgba(54, 50, 32, 0.493)
+    );
+
+    p {
+      color: white;
+      font-family: "Century Gothic", sans-serif;
+      font-weight: 200;
+      text-align: center;
+      padding: 0.5em;
+      #ch-heart {
+        font-size: 5vmin;
+        color: rgb(0, 204, 255);
+      }
+      #icon-git {
+        width: 20px;
+        height: auto;
+      }
+    }
+  }
+  a:link {
+    color: rgb(243, 246, 247);
+  }
+  a:visited {
+    color: rgb(241, 244, 245);
+  }
+  a:hover {
+    background: steelblue;
+  }
+}
+@media (min-width: 600px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "header header"
+      "navbar section ";
+    .header {
+      grid-area: header;
+    }
+    #navbar {
+      grid-area: navbar;
+      height: auto;
+    }
+    #container-section {
+      grid-area: section;
+    }
+  }
+}
+#anim {
+  animation-name: colorful;
+  animation-duration: 3s;
+}
+@keyframes colorful {
+  0% {
+    background-color: rgb(212, 212, 212);
+  }
+  100% {
+    background-color: rgba(255, 255, 0, 0.644);
+  }
+}
